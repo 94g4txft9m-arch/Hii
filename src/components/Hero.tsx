@@ -120,7 +120,7 @@ export function Hero() {
           <div className="noise-overlay absolute inset-0 opacity-10" />
 
           <motion.img
-            src="/graphics/hero-people.png"
+            src={`${import.meta.env.BASE_URL}graphics/hero-people.png`}
             alt="Konzultantky a konzultanti GDPR Akadémie — Motúzová & Lacko"
             initial={{ opacity: 0, scale: 1.06, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}

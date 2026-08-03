@@ -45,7 +45,7 @@ export function Team() {
           <div className="flex items-center gap-4">
             <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl ring-2 ring-magenta-500/40">
               <img
-                src="/graphics/tomas-liptai.png"
+                src={`${import.meta.env.BASE_URL}graphics/tomas-liptai.png`}
                 alt="Tomáš Liptai — GDPR Akadémia"
                 className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
               />
