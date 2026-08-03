@@ -13,7 +13,10 @@ const nextConfig: NextConfig = {
     ? {
         output: "export" as const,
         basePath,
-        images: { unoptimized: true },
+        images: {
+          loader: "custom" as const,
+          loaderFile: "./lib/image-loader.ts",
+        },
       }
     : {
         images: {
