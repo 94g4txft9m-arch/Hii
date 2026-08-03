@@ -13,8 +13,8 @@ export function TrustBar() {
         <ul className="mt-16 grid gap-10 border-t border-neutral-200 pt-12 md:grid-cols-3 md:gap-12">
           {TRUST.signals.map((signal, i) => (
             <Reveal key={signal.label} delay={i * 0.06}>
-              <li className="flex gap-4">
-                <span className="text-navy-700 mt-0.5 shrink-0">
+              <li className="group flex gap-4">
+                <span className="icon-anim text-navy-700 mt-0.5 shrink-0">
                   <SectionIcon name={signal.icon} className="size-5" />
                 </span>
                 <div>

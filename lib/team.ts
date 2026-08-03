@@ -88,8 +88,8 @@ export const OFFICE_TEAM: TeamMember[] = [
     phone: null,
     photo: {
       src: "/team/jozef-manuel-sencak.png",
-      width: 878,
-      height: 900,
+      width: 800,
+      height: 800,
       alt: "Portrét Jozefa Manuela Senčáka",
     },
     bio: "V kancelárii pomáha s právnym rešeršom, priebežnou agendou a ad hoc úlohami. Zaujíma sa najmä o IT právo, ochranu osobných údajov a trestné právo v digitálnom prostredí.",
@@ -100,13 +100,12 @@ export const OFFICE_TEAM: TeamMember[] = [
     slug: "tomas-liptai",
     name: "Tomáš Liptai",
     role: "Digital Marketing & Web Designer",
-    /** TODO: {{ DOPLNIŤ }} — e-mail na webe o-nas nie je. */
-    email: null,
+    email: "liptai@akmotuzova.sk",
     phone: null,
     photo: {
       src: "/team/tomas-liptai.png",
-      width: 400,
-      height: 400,
+      width: 800,
+      height: 800,
       alt: "Portrét Tomáša Liptaia",
     },
     bio: "V advokátskej kancelárii sa venujem webdizajnu, digitálnemu marketingu a tvorbe vizuálnej komunikácie. Podieľam sa na rozvoji online prezentácie kancelárie, navrhujem webové riešenia a grafické materiály, ktoré podporujú budovanie dôveryhodnej značky. Pri svojej práci spájam kreativitu, funkčnosť a strategické myslenie s dôrazom na profesionálnu prezentáciu právnych služieb.",

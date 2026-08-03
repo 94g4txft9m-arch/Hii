@@ -31,7 +31,7 @@ function PersonCard({
 
   return (
     <article className="flex h-full flex-col">
-      <div className="relative aspect-square w-full max-w-[280px] overflow-hidden bg-navy-700">
+      <div className="photo-zoom relative aspect-square w-full max-w-[280px] overflow-hidden bg-navy-700">
         <Image
           src={person.photo.src}
           alt={person.photo.alt}
@@ -63,7 +63,13 @@ function PersonCard({
               href={`mailto:${person.email}`}
               className={contactLinkClassName}
             >
-              <Mail className="size-4 shrink-0" strokeWidth={1.5} aria-hidden />
+              <span className="icon-anim">
+                <Mail
+                  className="size-4 shrink-0"
+                  strokeWidth={1.5}
+                  aria-hidden
+                />
+              </span>
               {person.email}
             </a>
           ) : null}
@@ -72,7 +78,13 @@ function PersonCard({
               href={formatPhoneHref(person.phone)}
               className={contactLinkClassName}
             >
-              <Phone className="size-4 shrink-0" strokeWidth={1.5} aria-hidden />
+              <span className="icon-anim">
+                <Phone
+                  className="size-4 shrink-0"
+                  strokeWidth={1.5}
+                  aria-hidden
+                />
+              </span>
               <span>{formatPhoneDisplay(person.phone)}</span>
             </a>
           ) : null}

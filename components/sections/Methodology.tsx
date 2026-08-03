@@ -21,9 +21,9 @@ export function Methodology() {
               className="editorial-row border-neutral-0/15"
             >
               <Reveal delay={i * 0.05}>
-                <div className="grid gap-4 md:grid-cols-[5rem_minmax(0,1fr)] md:gap-8">
+                <div className="group grid gap-4 md:grid-cols-[5rem_minmax(0,1fr)] md:gap-8">
                   <div className="flex items-start gap-3 md:flex-col md:gap-2">
-                    <span className="mt-0.5 text-magenta-500">
+                    <span className="icon-anim mt-0.5 text-magenta-500">
                       <SectionIcon name={step.icon} className="size-5" />
                     </span>
                     <span className="text-meta text-magenta-500">

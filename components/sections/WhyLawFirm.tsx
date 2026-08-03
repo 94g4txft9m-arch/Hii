@@ -19,11 +19,11 @@ export function WhyLawFirm() {
         {WHY_LAW_FIRM.tiles.map((tile, i) => (
           <li
             key={tile.title}
-            className="border-b border-neutral-0/15 py-8 sm:px-6 sm:odd:border-r lg:border-r lg:[&:nth-child(3n)]:border-r-0 lg:first:pl-0"
+            className="group border-b border-neutral-0/15 py-8 transition-colors duration-300 hover:bg-neutral-0/[0.04] sm:px-6 sm:odd:border-r lg:border-r lg:[&:nth-child(3n)]:border-r-0 lg:first:pl-0"
           >
             <Reveal delay={i * 0.05} className="h-full">
               <div className="flex h-full flex-col gap-3">
-                <span className="text-magenta-500">
+                <span className="icon-anim text-magenta-500">
                   <SectionIcon name={tile.icon} className="size-5" />
                 </span>
                 <h3 className="text-display-sm text-neutral-0">{tile.title}</h3>

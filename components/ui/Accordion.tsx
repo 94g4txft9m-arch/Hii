@@ -52,7 +52,7 @@ export function AccordionItem({
           <span>{title}</span>
           <span
             aria-hidden
-            className={`flex size-9 shrink-0 items-center justify-center rounded-full ${toneIcon[tone]}`}
+            className={`flex size-9 shrink-0 items-center justify-center rounded-full transition-transform duration-300 motion-reduce:transition-none ${open ? "rotate-180" : ""} ${toneIcon[tone]}`}
           >
             {open ? (
               <Minus className="size-4" strokeWidth={2} />
@@ -67,7 +67,7 @@ export function AccordionItem({
         role="region"
         aria-labelledby={buttonId}
         hidden={!open}
-        className="pb-6"
+        className={`pb-6 ${open ? "accordion-panel" : ""}`}
       >
         {children}
       </div>

@@ -60,7 +60,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-navy-700 hover:text-magenta-600 text-[1.05rem] leading-snug font-medium tracking-[-0.01em] transition-colors duration-150 motion-reduce:transition-none"
+              className="nav-underline text-navy-700 hover:text-magenta-600 text-[1.05rem] leading-snug font-medium tracking-[-0.01em] transition-colors duration-150 motion-reduce:transition-none"
             >
               {link.label}
             </Link>

@@ -15,11 +15,11 @@ export function Problem() {
       <div className="citation-axis pl-6 md:pl-8">
         <ul>
           {PROBLEM.situations.map((item, i) => (
-            <li key={item.citation} className="editorial-row">
+            <li key={item.citation} className="editorial-row group">
               <Reveal delay={Math.min(i, 5) * 0.05}>
                 <div className="grid gap-3 md:grid-cols-[minmax(0,1fr)_auto] md:items-start md:gap-8">
                   <div className="flex gap-4">
-                    <span className="text-navy-700 mt-1 shrink-0">
+                    <span className="icon-anim text-navy-700 mt-1 shrink-0">
                       <SectionIcon name={item.icon} className="size-5" />
                     </span>
                     <div>

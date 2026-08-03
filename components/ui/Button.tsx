@@ -4,9 +4,10 @@ import type { ComponentPropsWithoutRef, ReactNode } from "react";
 type Variant = "primary" | "magenta" | "secondary" | "ghost" | "ghost-on-navy";
 
 const variants: Record<Variant, string> = {
-  primary: "bg-navy-700 text-neutral-0 hover:bg-navy-600 active:bg-navy-800",
+  primary:
+    "btn-sheen bg-navy-700 text-neutral-0 hover:bg-navy-600 hover:shadow-[0_12px_28px_-14px_rgba(18,22,58,0.55)] active:bg-navy-800",
   magenta:
-    "bg-magenta-500 text-neutral-0 hover:bg-magenta-600 active:bg-magenta-700",
+    "btn-sheen bg-magenta-500 text-neutral-0 hover:bg-magenta-600 hover:shadow-[0_12px_28px_-14px_rgba(201,38,95,0.6)] active:bg-magenta-700",
   secondary:
     "border border-navy-700 bg-transparent text-navy-700 hover:bg-neutral-50 active:bg-neutral-100",
   ghost: "bg-transparent text-navy-700 hover:bg-neutral-100",

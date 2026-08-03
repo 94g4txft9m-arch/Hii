@@ -27,7 +27,7 @@ function PackageCard({
 
   return (
     <article
-      className={`flex h-full flex-col border-t-2 pt-8 ${
+      className={`card-lift flex h-full flex-col border-t-2 pt-8 ${
         pkg.recommended
           ? "border-magenta-500"
           : "border-navy-700"
