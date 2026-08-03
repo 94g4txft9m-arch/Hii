@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://94g4txft9m-arch.github.io/Hii
+Sitemap: https://94g4txft9m-arch.github.io/Hii/sitemap.xml
