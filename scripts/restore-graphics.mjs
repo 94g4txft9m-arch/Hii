@@ -17,6 +17,7 @@ const MAP = [
   ["jozef-manuel-sencak.png", "public/team/jozef-manuel-sencak.png"],
   ["tomas-liptai.png", "public/team/tomas-liptai.png"],
   ["motuzova-lacko-cutout.png", "public/team/motuzova-lacko-cutout.png"],
+  ["motuzova-lacko.jpg", "public/team/motuzova-lacko.jpg"],
 ];
 
 for (const [src, dst] of MAP) {
