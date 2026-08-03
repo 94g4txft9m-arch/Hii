@@ -15,6 +15,10 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      STATIC_EXPORT: "1"
+      NEXT_PUBLIC_BASE_PATH: /Hii
+      NEXT_PUBLIC_SITE_URL: https://94g4txft9m-arch.github.io/Hii
     steps:
       - uses: actions/checkout@v4
 
@@ -26,11 +30,32 @@ jobs:
       - name: Inštalácia závislostí
         run: npm ci
 
-      - name: Build
+      - name: Kontrola typov a lint
+        run: npm run typecheck && npm run lint
+
+      - name: Build (statický export)
         run: npm run build
+
+      - name: Rýchly redirect z koreňa + .nojekyll
+        run: |
+          cat > out/index.html <<'HTML'
+          <!DOCTYPE html>
+          <html lang="sk">
+            <head>
+              <meta charset="utf-8" />
+              <meta http-equiv="refresh" content="0; url=/Hii/skolenie-gdpr-zodpovedna-osoba" />
+              <link rel="canonical" href="https://94g4txft9m-arch.github.io/Hii/skolenie-gdpr-zodpovedna-osoba" />
+              <title>GDPR Akadémia — Motúzová &amp; Lacko</title>
+            </head>
+            <body>
+              <p><a href="/Hii/skolenie-gdpr-zodpovedna-osoba">Pokračovať na GDPR Akadémiu</a></p>
+            </body>
+          </html>
+          HTML
+          touch out/.nojekyll
 
       - name: Nasadenie na vetvu gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./out

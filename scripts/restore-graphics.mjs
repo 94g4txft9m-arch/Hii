@@ -1,25 +1,27 @@
-#!/usr/bin/env node
-// Obnoví záväznú (baseline) grafiku do public/graphics.
-// Použitie: npm run restore:graphics
-import { cpSync, mkdirSync, existsSync, readdirSync } from "node:fs";
-import { fileURLToPath } from "node:url";
+/**
+ * Obnoví schválenú finálnu grafiku z `assets/graphics-baseline/` do `public/`.
+ * Použitie: `npm run restore:graphics`
+ */
+import { copyFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const root = join(__dirname, "..");
-const src = join(root, "assets", "graphics-baseline");
-const dest = join(root, "public", "graphics");
+const root = join(dirname(fileURLToPath(import.meta.url)), "..");
+const baseline = join(root, "assets", "graphics-baseline");
 
-if (!existsSync(src)) {
-  console.error(`[restore:graphics] Baseline priečinok neexistuje: ${src}`);
-  process.exit(1);
+const MAP = [
+  ["hero-motuzova-lacko.png", "public/brand/hero-motuzova-lacko.png"],
+  ["logo.svg", "public/brand/logo.svg"],
+  ["zuzana-motuzova.png", "public/team/zuzana-motuzova.png"],
+  ["pavel-lacko.png", "public/team/pavel-lacko.png"],
+  ["jozef-manuel-sencak.png", "public/team/jozef-manuel-sencak.png"],
+  ["tomas-liptai.png", "public/team/tomas-liptai.png"],
+  ["motuzova-lacko-cutout.png", "public/team/motuzova-lacko-cutout.png"],
+];
+
+for (const [src, dst] of MAP) {
+  const target = join(root, dst);
+  mkdirSync(dirname(target), { recursive: true });
+  copyFileSync(join(baseline, src), target);
+  console.log(`obnovené: ${dst}`);
 }
-
-mkdirSync(dest, { recursive: true });
-cpSync(src, dest, { recursive: true });
-
-const files = readdirSync(dest);
-console.log(
-  `[restore:graphics] Obnovených ${files.length} súborov do public/graphics:`
-);
-for (const f of files) console.log(`  • ${f}`);
