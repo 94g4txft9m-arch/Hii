@@ -11,6 +11,7 @@ const baseline = join(root, "assets", "graphics-baseline");
 
 const MAP = [
   ["hero-motuzova-lacko.png", "public/brand/hero-motuzova-lacko.png"],
+  ["brand-stripes.png", "public/brand/brand-stripes.png"],
   ["logo.svg", "public/brand/logo.svg"],
   ["zuzana-motuzova.png", "public/team/zuzana-motuzova.png"],
   ["pavel-lacko.png", "public/team/pavel-lacko.png"],

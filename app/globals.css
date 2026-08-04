@@ -333,15 +333,23 @@ body {
   display: none;
 }
 
+/* Pruhová brand grafika pod závojom — dodaný dizajn (raster vo vysokom rozlíšení) */
+.brand-backdrop__stripes {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
 .brand-backdrop__scrim {
   position: absolute;
   inset: 0;
   z-index: 1;
   background: linear-gradient(
     105deg,
-    color-mix(in srgb, var(--color-navy-900) 92%, transparent) 0%,
-    color-mix(in srgb, var(--color-navy-900) 72%, transparent) 48%,
-    transparent 78%
+    color-mix(in srgb, var(--color-navy-900) 90%, transparent) 0%,
+    color-mix(in srgb, var(--color-navy-900) 74%, transparent) 48%,
+    color-mix(in srgb, var(--color-navy-900) 58%, transparent) 100%
   );
 }
 
