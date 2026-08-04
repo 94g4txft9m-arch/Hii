@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-500: #4a5399;
+  --color-navy-600: #333b7e;
+  --color-navy-700: #242a64;
+  --color-navy-800: #1b2050;
+  --color-navy-900: #12163a;
+  --color-magenta-500: #ef4a85;
+  --color-magenta-600: #c9265f;
+  --color-magenta-700: #ab1a4e;
+  --color-gold-500: #eeba2b;
+  --color-lavender: #b5b9c9;
+  --color-neutral-0: #ffffff;
+  --color-neutral-50: #f5f6f8;
+  --color-neutral-100: #eceef3;
+  --color-neutral-200: #d8dbe3;
+  --color-neutral-500: #6b7280;
+  --color-neutral-600: #4b5563;
+  --font-display: "Newsreader", Georgia, serif;
+  --font-sans: "Archivo", system-ui, sans-serif;
+}
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/newsreader/v23/cY9qfThuFIQ65a5B3lSkVtGs.woff2")
+    format("woff2");
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-neutral-50);
+  color: var(--color-navy-700);
+  -webkit-font-smoothing: antialiased;
+}
